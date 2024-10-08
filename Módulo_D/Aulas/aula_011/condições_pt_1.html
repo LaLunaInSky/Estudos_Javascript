@@ -54,16 +54,17 @@
         }
 
         aside#aviso p{
+            color: rgb(32, 32, 32);
             max-width: 350px;
             padding: 10px;
             font-weight: bolder;
             margin: auto;
-            background-color: brown;
+            background-color: rgb(247, 223, 85);
         }
 
         aside#aviso p > span {
             padding: 3px;
-            border: solid 2.5px white;
+            border: solid 2.5px rgb(32, 32, 32);
             border-radius: 2px;
         }
     </style>
@@ -86,7 +87,7 @@
            var velocidade = Number(document.querySelector('input#velocidade').value)
            var aviso = document.querySelector('aside#aviso')
 
-           aviso.innerHTML = `<p>Sua velocidade atual é de <span>${velocidade}km/h</span></p>`
+           aviso.innerHTML = `<p>Sua velocidade atual é de <span>${velocidade} Km/h</span></p>`
 
            aviso.innerHTML += `<p>Dirija utilizando cinto de segurança!</p>`
         }
