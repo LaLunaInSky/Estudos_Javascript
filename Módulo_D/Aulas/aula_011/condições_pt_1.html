@@ -11,7 +11,7 @@
 
         main {
             margin: 0px auto;
-            padding: 15px;
+            padding: 0px 15px 15px;
             border-radius: 15px;
             max-width: 500px;
             color: white;
@@ -20,11 +20,21 @@
         }
         
         main h1 {
+            padding-top: 10px;
             margin-top: 0px;
+            font-size: 2.4em;
         }
 
-        main p {
-            margin-top: 70px;
+        main section {
+            max-width: 300px;
+            margin: 0px auto;
+            padding: 10px;
+            background-color: black;
+            border-radius: 0px 0px 15px 15px;
+        }
+
+        main > p {
+            margin-top: 20px;
             margin-bottom: 4px;
             font-weight: bold;
             font-size: 1.1em;
@@ -37,25 +47,49 @@
             font-size: 1.2em;
         }
 
-        #enviar {
+        #analisar {
             font-size: 1.3em;
             display: block;
-            margin: 50px auto 5px;
+            margin: 30px auto 15px;
+        }
+
+        aside#aviso p{
+            max-width: 350px;
+            padding: 10px;
+            font-weight: bolder;
+            margin: auto;
+            background-color: brown;
+        }
+
+        aside#aviso p > span {
+            padding: 3px;
+            border: solid 2.5px white;
+            border-radius: 2px;
         }
     </style>
 </head>
 <body>
     <main>
-        <h1>DETRAN</h1>
-        <h2>Sistema de Multas</h2>
+        <section>
+            <h1>DETRAN</h1>
+            <h2>Sistema de Multas</h2>
+        </section>
+
         <p>Qual é a sua velocidade?</p>
         <input type="number" name="velocidade" id="velocidade"> Km/h
-        <input type="button" value="Analisar" id="enviar" onclick="calcular()">
+        <input type="button" value="Analisar" id="analisar" onclick="calcular()">
+        <aside id="aviso"></aside>
     </main>
 
     <script>
-        var velocidade = document.getElementById('velocidade')
+        function calcular() {
+           var velocidade = Number(document.querySelector('input#velocidade').value)
+           var aviso = document.querySelector('aside#aviso')
 
+           aviso.innerHTML = `<p>Sua velocidade atual é de <span>${velocidade}km/h</span></p>`
+
+           aviso.innerHTML += `<p>Dirija utilizando cinto de segurança!</p>`
+        }
     </script>
 </body>
 </html>
