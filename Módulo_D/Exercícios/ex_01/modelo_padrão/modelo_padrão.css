@@ -29,13 +29,14 @@ main {
 }
 
 footer {
+    font-style: italic;
     margin: 30px;
 }
 
 footer a {
     color: white;
     text-decoration: none;
-    font: bold 1.1em Arial;
+    font: italic bold 1.1em Arial;
 }
 
 footer a::after {
