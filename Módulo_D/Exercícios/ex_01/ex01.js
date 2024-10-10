@@ -7,4 +7,19 @@ var imgHora = document.querySelector('section#imgHora')
 
 infoHora.innerHTML = `Agora são ${horaAtual} horas.`
 
-imgHora.innerHTML = `teste`
+if (horaAtual < 13) {
+    if (horaAtual < 5) {
+        /*Boa madrugada*/
+    } else {
+        /*Bom dia*/
+    }
+
+} else if (horaAtual < 24) {
+    if (horaAtual < 19) {
+        /*Boa tarde*/
+    } else {
+        /*Boa noite*/
+    }
+}
+
+imgHora.innerHTML = `<img src="" alt="">`

@@ -22,21 +22,25 @@ header h1 {
 main {
     color: black;
     background-color: white;
-    max-width: 500px;
-    max-height: 500px;
+    width: 500px;
+    height: 500px;
     margin: auto;
     border-radius: 20px;
     box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.192);
 }
 
 section#infoHora {
-    padding: 20px 0px;
+    padding: 60px 0px 40px;
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 2em;
 }
 
 section#imgHora {
-
+    background-color: #3a3a3a;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
 }
 
 footer {
