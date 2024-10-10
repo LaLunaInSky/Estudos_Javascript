@@ -36,7 +36,7 @@ section#infoHora {
     font-size: 2em;
 }
 
-section#imgHora {
+section#imgHora, section#imgHora > img{
     background-color: #3a3a3a;
     margin: auto;
     width: 300px;
