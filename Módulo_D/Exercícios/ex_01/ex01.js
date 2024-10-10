@@ -1,12 +1,13 @@
 var data = new Date()
 var horaAtual = data.getHours()
+var minutoAtual = data.getMinutes()
 
 var comprimento = document.querySelector('h1#comprimento')
 var infoHora = document.querySelector('section#infoHora')
 var imgHora = document.querySelector('section#imgHora')
 var headStyle = document.querySelector('head')
 
-infoHora.innerHTML = `<p>Agora são ${horaAtual} horas.</p>`
+infoHora.innerHTML = `<p>Agora são <span id="horaMostrador">${horaAtual}:${minutoAtual}</span></p>`
 
 if (horaAtual < 13) {
     if (horaAtual < 5) {
