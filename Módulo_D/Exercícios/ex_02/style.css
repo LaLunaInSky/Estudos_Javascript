@@ -51,6 +51,10 @@ input#verificar {
     font-weight: bold;
 }
 
+section#resultado {
+    margin: 10px 0px 0px;
+}
+
 footer {
     font-style: italic;
     margin: 30px;

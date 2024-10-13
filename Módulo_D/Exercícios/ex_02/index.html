@@ -14,14 +14,20 @@
     </header>
     <main>
         <section id="ano">
-            Ano de Nascimento: <input type="datetime" name="anoDeNascimento" id="anoDeNascimento">
+            <p>Ano de Nascimento:
+                <input type="datetime" name="anoDeNascimento" id="anoDeNascimento">
+            </p>
         </section>
         <section id="gênero">
-            <p>Gênero:</p>
-            <!--falta as opções-->
+            <p>Gênero:
+                <input type="radio" name="respostaGênero" id="respostaMas">
+                <label for="respostaMas">Masculino</label> 
+                <input type="radio" name="respostaGênero" id="respostaFem">
+                <label for="respostaFem">Feminino</label>
+            </p>
         </section>
         <input type="button" value="Verificar" id="verificar" onclick="Verificação()">
-        <section>
+        <section id="resultado">
             <p>Preencha os dados acima para ver o resultado!</p>
         </section>
     </main>
