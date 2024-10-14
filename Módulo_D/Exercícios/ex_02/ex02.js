@@ -28,36 +28,42 @@ function Verificação() {
         /*bebê - criança - adolescente - jovem adulto - adulto - velho
         0 á 2    até 11     até 17         até 29       até 59  até morrer
         */
+       
        if (idade <= 2) {
         if (gêneroF == true) {
             imagem = 'images/bebê-f.jpg'
         } else if (gêneroM == true) {
             imagem = 'images/bebê-m.jpg'
         }
+
        } else if (idade <= 11) {
         if (gêneroF == true) {
             imagem = 'images/criança-f.jpg'
         } else if (gêneroM == true) {
             imagem = 'images/criança-m.jpg'
         }
+
        } else if (idade <= 17) {
         if (gêneroF == true) {
             imagem = 'images/adolescente-f.jpg'
         } else if (gêneroM == true) {
             imagem = 'images/adolescente-m.jpg'
         }
+
        } else if (idade <= 29) {
         if (gêneroF == true) {
             imagem = 'images/jovem-f.jpg'
         } else if (gêneroM == true) {
             imagem = 'images/jovem-m.jpg'
         }
+
        } else if (idade <= 59) {
         if (gêneroF == true) {
             imagem = 'images/adulto-f.jpg'
         } else if (gêneroM == true) {
             imagem = 'images/adulto-m.jpg'
         }
+
        } else {
         if (gêneroF == true) {
             imagem = 'images/idoso-f.jpg'
@@ -73,7 +79,5 @@ function Verificação() {
         
     } else {
         alert('Erro, alguma informação está errado ou faltando!')
-    }
-
-    
+    }   
 }
