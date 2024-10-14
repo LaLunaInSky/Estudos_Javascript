@@ -30,8 +30,14 @@ function Verificação() {
 
     if (validação[0] == true && validação[1] == true) {
         resultado.innerHTML = `<p id='resultadoP'>Detectamos ${gêneroFinal} com ${idade} anos.</p>`
-        resultado.innerHTML += `<img src="${imagem}" alt="imagem rosto de acordo com idade" id='imagemRosto'>`
+        resultado.innerHTML += `<aside><img src="${imagem}" alt="imagem rosto de acordo com a idade" id='imagemRosto'></aside>`
+        
     } else {
         alert('Erro, alguma informação está errado ou faltando!')
     }
+
+    
 }
+
+var resultado  = document.querySelector('section#resultado')
+resultado.innerHTML += `<aside><img src="" alt="" id='imagemRosto'></aside>`
