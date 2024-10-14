@@ -12,7 +12,7 @@ body{
 }
 
 header {
-    margin: 50px 0px 30px;
+    margin: 30px 0px 30px;
 }
 
 header h1 {
@@ -56,6 +56,7 @@ section#resultado {
 }
 
 p#resultadoP {
+    font-weight: bold;
     text-align: center;
 }
 
