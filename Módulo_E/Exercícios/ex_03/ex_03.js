@@ -5,21 +5,35 @@ function Contagem() {
     var resultado = document.querySelector('section#resultado')
     var resultadoContagem = []
 
-    if (numberEnd === '' || numberPass === '' || numberStart === '') {
+    resultado.innerHTML = `<p>${numberStart} | ${numberEnd} | ${numberPass}</p>`
+
+    if (numberEnd === "" || numberPass === "" || numberStart === "") {
         resultado.innerHTML = `<p>Impossível contar!</p>`
     } else {
+        numberStart = Number(numberStart)
+        numberEnd = Number(numberEnd)
+        numberPass = Number(numberPass)
+
+        if (numberPass == 0) {
+            alert('Passo Inválido! Vou considerar como PASSO 1')
+            numberPass = 1
+        }
+
         if (numberStart < numberEnd) {
             //positivo
-            resultado.innerHTML = `<p>chegou aqui!</p>`
-            while (numberStart <= numberEnd) {
-                resultado.innerText += `t`
-                numberStart = numberStart - numberPass
+            for (numberStart; numberStart <=  numberEnd; numberStart += numberPass) {
+                resultadoContagem += numberStart
+                resultadoContagem += String.fromCodePoint(0x1F449)
             }
         } else {
             //negativo
-            resultado.innerHTML = `<p>chegou aqui 2!</p>`
+            for (numberStart; numberStart >= numberEnd; numberStart -= numberPass) {
+                resultadoContagem += numberStart
+                resultadoContagem += String.fromCodePoint(0x1F449)
+            }
         }
-        
-        //resultado.innerHTML = `<p>Contando: <br>${resultadoContagem}</p>`
+        resultadoContagem += String.fromCodePoint(0x1F3C1)
+
+        resultado.innerHTML = `<p>Contando: <br>${resultadoContagem}</p>`
     }
 }
