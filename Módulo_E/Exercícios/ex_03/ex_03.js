@@ -1,9 +1,9 @@
 function Contagem() {
-    var numberStart = document.querySelector("input#numberStart").value
-    var numberEnd = document.querySelector('input#numberEnd').value
-    var numberPass = document.querySelector('input#numberPass').value
-    var resultado = document.querySelector('section#resultado')
-    var resultadoContagem = []
+    let numberStart = document.querySelector("input#numberStart").value
+    let numberEnd = document.querySelector('input#numberEnd').value
+    let numberPass = document.querySelector('input#numberPass').value
+    let resultado = document.querySelector('section#resultado')
+    let resultadoContagem = []
 
     if (numberEnd === "" || numberPass === "" || numberStart === "") {
         resultado.innerHTML = `<p>Impossível contar!</p>`
