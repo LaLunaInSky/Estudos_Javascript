@@ -20,14 +20,12 @@ function Contagem() {
         if (numberStart < numberEnd) {
             //positivo
             for (numberStart; numberStart <=  numberEnd; numberStart += numberPass) {
-                resultadoContagem += numberStart
-                resultadoContagem += String.fromCodePoint(0x1F449)
+                resultadoContagem += `${numberStart}${String.fromCodePoint(0x1F449)}`
             }
         } else {
             //negativo
             for (numberStart; numberStart >= numberEnd; numberStart -= numberPass) {
-                resultadoContagem += numberStart
-                resultadoContagem += String.fromCodePoint(0x1F449)
+                resultadoContagem += `${numberStart}${String.fromCodePoint(0x1F449)}`
             }
         }
         resultadoContagem += String.fromCodePoint(0x1F3C1)
