@@ -5,8 +5,6 @@ function Contagem() {
     var resultado = document.querySelector('section#resultado')
     var resultadoContagem = []
 
-    resultado.innerHTML = `<p>${numberStart} | ${numberEnd} | ${numberPass}</p>`
-
     if (numberEnd === "" || numberPass === "" || numberStart === "") {
         resultado.innerHTML = `<p>Impossível contar!</p>`
     } else {
