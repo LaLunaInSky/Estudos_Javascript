@@ -48,7 +48,7 @@ input {
     width: 100px;
 }
 
-p#paragrafoInicial {
+section#resultado > p {
     text-align: left;
     margin-top: -10px;
     margin-left: 20px;
