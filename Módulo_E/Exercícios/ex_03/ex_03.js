@@ -12,7 +12,7 @@ function Contagem() {
         numberEnd = Number(numberEnd)
         numberPass = Number(numberPass)
 
-        if (numberPass == 0) {
+        if (numberPass <= 0) {
             alert('Passo Inválido! Vou considerar como PASSO 1')
             numberPass = 1
         }
@@ -20,12 +20,12 @@ function Contagem() {
         if (numberStart < numberEnd) {
             //positivo
             for (numberStart; numberStart <=  numberEnd; numberStart += numberPass) {
-                resultadoContagem += `${numberStart}${String.fromCodePoint(0x1F449)}`
+                resultadoContagem += `${numberStart} ${String.fromCodePoint(0x1F449)}`
             }
         } else {
             //negativo
             for (numberStart; numberStart >= numberEnd; numberStart -= numberPass) {
-                resultadoContagem += `${numberStart}${String.fromCodePoint(0x1F449)}`
+                resultadoContagem += `${numberStart} ${String.fromCodePoint(0x1F449)}`
             }
         }
         resultadoContagem += String.fromCodePoint(0x1F3C1)
