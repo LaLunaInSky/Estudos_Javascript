@@ -12,7 +12,23 @@
             Vamos contar
         </h1>
     </header>
-    <main></main>
+    <main>
+        <section id="camposNúmeros">
+            <label for="numberStart">Início:</label>
+            <input type="number" name="numberStart" id="numberStart">
+            <br>
+            <label for="numberEnd">Fim:</label>
+            <input type="number" name="numberEnd" id="numberEnd">
+            <br>
+            <label for="numberPass">Passo:</label>
+            <input type="number" name="numberPass" id="numberPass">
+            <br>
+            <input type="button" value="Contar" id="buttonContar" onclick="Contagem()">
+        </section>
+        <section id="resultado">
+            <p id="paragrafoInicial">Preparando a contagem...</p>
+        </section>
+    </main>
     <footer>
         <p>
             By <a href="https://lalunainsky.github.io/" target="_blank">LaLunaInSky</a>
