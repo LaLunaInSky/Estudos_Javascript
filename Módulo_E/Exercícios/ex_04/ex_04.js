@@ -11,7 +11,6 @@ function GerarTabuada() {
         alert('Erro! Por favor digite um valor!')
     } else {
         numberDigitado = Number(numberDigitado)
-
         resultado.removeChild(item)
 
         for (let c = 1; c <= 10; c++) {
