@@ -47,6 +47,19 @@ input#gerar {
     padding: 4px;
 }
 
+select#resultado {
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+option {
+    padding: 2px;
+    font-weight: bold;
+}
+
 footer {
     font-style: italic;
     margin: 30px;

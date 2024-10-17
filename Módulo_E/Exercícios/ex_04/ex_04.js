@@ -1,16 +1,23 @@
+var resultado = document.querySelector('select#resultado')
+var item = document.createElement('option')
+resultado.appendChild(item)
+
+item.text = 'Escolha uma Tabuada!'
+
 function GerarTabuada() {
-    var numberDigitado = document.querySelector('input#numberTabuada').value
-    var resultado = document.querySelector('section#resultado')
+    let numberDigitado = document.querySelector('input#numberTabuada').value
 
     if (numberDigitado === '') {
         alert('Erro! Por favor digite um valor!')
     } else {
         numberDigitado = Number(numberDigitado)
 
-        resultado.innerHTML = `<p id="tabuadaEscolhida">Tabuada do ${numberDigitado} <br></p>`
+        resultado.removeChild(item)
 
-        for (var c = 1; c <= 10; c++) {
-            resultado.innerHTML += `${numberDigitado} x ${c} = ${numberDigitado * c} <br>`
+        for (let c = 1; c <= 10; c++) {
+            item = document.createElement('option')
+            item.text = `${numberDigitado} x ${c} = ${numberDigitado * c}`
+            resultado.appendChild(item)
         }
     }
 }
