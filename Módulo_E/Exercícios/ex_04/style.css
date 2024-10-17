@@ -49,6 +49,7 @@ input#gerar {
 
 select#resultado {
     padding: 10px;
+    width: 200px;
     text-align: center;
     font-size: 1em;
     margin-bottom: 20px;
