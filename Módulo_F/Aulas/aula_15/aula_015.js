@@ -16,3 +16,15 @@ console.log("")
 for (let c in num) {
     console.log(num[c])
 }
+
+console.log("")
+
+//buscar valores
+let numero = 5
+let encontrar = num.indexOf(numero)
+
+if (encontrar < 0) {
+    console.log(`O número ${numero} não foi encontrado`)
+} else {
+    console.log(`O número ${numero} está na posição ${encontrar}`)
+}
