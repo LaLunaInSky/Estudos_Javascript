@@ -9,10 +9,26 @@
 <body>
     <header>
         <h1>
-            Título
+            Analisador de Números
         </h1>
     </header>
-    <main></main>
+    <main>
+        <section id="dados">
+            <label for="numerodigitado">Escreva um número (entre 1 e 100!)</label>
+            <br>
+            <input type="number" name="numerodigitado" id="numerodigitado">
+            <input id="buttonAdicionar" type="button" value="Adicionar" onclick="adicionarNúmero()">
+            
+            <aside>
+                <select name="listaDosNúmeros" id="listaDosNúmeros" size="10">
+                    <option value="teste">teste</option>
+                </select>
+                <br>
+                <input id="buttonFinalizar" type="button" value="Finalizar" onclick="calcularNúmeros()">
+            </aside>
+        </section>
+        <section id="resultado"></section>
+    </main>
     <footer>
         <p>
             By <a href="https://lalunainsky.github.io/" target="_blank">LaLunaInSky</a>
