@@ -1,7 +1,15 @@
+var caixa = document.querySelector('input#numerodigitado')
+caixa.focus()
+
 var resultadoSection = document.querySelector('section#resultado')
 var caixaDosNúmeros = document.querySelector('select#listaDosNúmeros')
 var númerosQueForamDigitadosPeloUsuário = []
 var backupQuantidade = 0
+
+function deletarEFoco() {
+    caixa.value = ''
+    caixa.focus()
+}
 
 function adicionarValorNaCaixa(num) {
     let novoValor = document.createElement('option')
@@ -28,6 +36,8 @@ function adicionarNúmero() {
     } else {
         alert('O Número digitado é inválido!')
     }
+
+    deletarEFoco()
 }
 
 function somar() {
