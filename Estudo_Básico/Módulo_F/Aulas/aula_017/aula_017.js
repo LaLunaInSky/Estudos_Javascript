@@ -1,3 +1,4 @@
+//Uso de objeto (Básico)
 let amigo = {nome: 'José', gênero: 'M', peso: 85.2,
     engordar(peso=0) {
         if (peso != 0) {
