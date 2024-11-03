@@ -19,8 +19,7 @@ function adicionarValorNaCaixa(num) {
 }
 
 function adicionarNúmero() {
-    let númeroDigitadoPeloUsuário = document.querySelector('input#numerodigitado').value
-
+    let númeroDigitadoPeloUsuário = caixa.value
     if (númeroDigitadoPeloUsuário != '') {
         númeroDigitadoPeloUsuário = Number(númeroDigitadoPeloUsuário)
         if (númeroDigitadoPeloUsuário > 0 && númeroDigitadoPeloUsuário < 101) {
