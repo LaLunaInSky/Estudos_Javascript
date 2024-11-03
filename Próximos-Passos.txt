@@ -1,0 +1,9 @@
+Buscar estudar:
+    -functions
+    -objetos
+    -modularização
+    -RegEx
+    -JSON
+    -AJAX
+    -NodeJS
+    
