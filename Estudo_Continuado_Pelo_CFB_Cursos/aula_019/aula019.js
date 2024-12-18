@@ -9,6 +9,10 @@ while (n<max) {
     if (n%2) {
         continue
     }
+
+    if (n>50) {
+        break
+    }
     
     console.log(n)
 }
