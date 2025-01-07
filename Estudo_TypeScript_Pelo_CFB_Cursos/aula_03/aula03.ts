@@ -1,6 +1,6 @@
 let nome_Aula03: String
 nome_Aula03 = 'luna'
-nome_Aula03 ='Carla'
+nome_Aula03 ='cfb cursos'
 
 let valor_Aula03:number
 valor_Aula03 = 10.5
