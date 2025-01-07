@@ -7,16 +7,14 @@ const btnReverter = document.querySelector('#btn_reverter')
 const cursosTodos = [...document.querySelectorAll('.curso')]
 
 cursosTodos.map((e) => {
-    e.addEventListener('click', () => {
-        if (e.parentElement == caixa1) {   
-            e.classList.toggle('destaque')
-        }
+    e.addEventListener('click', () => {  
+        e.classList.toggle('destaque')
     })
 })
 
 btnCopiar.addEventListener('click', ()=> {
     cursosTodos.map((e) => {
-        if (e.classList.contains('destaque')) {
+        if (e.classList.contains('destaque') && e.parentElement == caixa1) {
             e.classList.remove('destaque')
             caixa2.appendChild(e)
         }
@@ -26,9 +24,11 @@ btnCopiar.addEventListener('click', ()=> {
 btnReverter.addEventListener('click', ()=>{
     if (caixa2.children.length != 0) {
         const cursosCaixa2 = [...caixa2.children]
-        cursosCaixa2.map((e) => {
-            e.classList.remove('destaque')
-            caixa1.appendChild(e)
+        cursosCaixa2.map((e)=>{
+            if (e.classList.contains('destaque')) {
+                e.classList.remove('destaque')
+                caixa1.appendChild(e)
+            }
         })
     }
 })
