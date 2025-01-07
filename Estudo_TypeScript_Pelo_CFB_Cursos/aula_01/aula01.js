@@ -1,6 +1,7 @@
-var nome = 'Luna';
-var canal = 'LaLunaInSky';
-var curso = "Typescript";
+"use strict";
+const nome = 'Luna';
+const canal = 'LaLunaInSky';
+const curso = "Typescript";
 console.log(nome);
 console.log(canal);
 console.log(curso);
