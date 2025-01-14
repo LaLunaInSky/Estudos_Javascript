@@ -2,6 +2,7 @@
 
 const caixaCursosAdicionados = document.querySelector("#caixaCursosAdicionados")
 const btnAddNovoCurso = document.querySelector("#btnAdicionarNovoCurso")
+const btnCursoSelecionado = document.querySelector("#btnCursoSelecionado")
 const inputNomeCurso = document.querySelector("#nomeCurso")
 
 const criarNovoCurso = (nomeCurso)=>{
@@ -32,4 +33,18 @@ btnAddNovoCurso.addEventListener('click', ()=>{
     }
     
     inputNomeCurso.value = ''
+})
+
+btnCursoSelecionado.addEventListener("click", ()=>{
+    if (document.querySelector("#caixaCursosAdicionados").children.length == 0) {
+        alert("Nenhum curso ainda adicionado!")
+    } else {
+        const cursosAdicionados = [...document.querySelectorAll(".curso")].filter((valores)=>{
+            if (valores.children[1].checked == true) {
+                alert('O curso selecionado é o '+ valores.children[0].innerText)
+            } else {
+                alert("Nenhum curso selecionado ainda!")
+            }
+        })
+    }
 })
