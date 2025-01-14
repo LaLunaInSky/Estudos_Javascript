@@ -5,6 +5,8 @@ const btnAddNovoCurso = document.querySelector("#btnAdicionarNovoCurso")
 const btnCursoSelecionado = document.querySelector("#btnCursoSelecionado")
 const inputNomeCurso = document.querySelector("#nomeCurso")
 
+const cursosPréCriados = ["HTML", 'CSS', "Javascript", "PHP", "React", "MySQL", "ReactNative"]
+
 const criarNovoCurso = (nomeCurso)=>{
     const nomeDoCurso = nomeCurso
     const caixaDeCursos = document.querySelector("#caixaCursosAdicionados")    
@@ -27,6 +29,10 @@ const criarNovoCurso = (nomeCurso)=>{
     caixaDeCursos.appendChild(divCurso)
 }
 
+cursosPréCriados.map((elemento)=>{
+    criarNovoCurso(elemento)
+})
+
 btnAddNovoCurso.addEventListener('click', ()=>{
     if (inputNomeCurso.value != '') {
         criarNovoCurso(inputNomeCurso.value)
@@ -36,15 +42,9 @@ btnAddNovoCurso.addEventListener('click', ()=>{
 })
 
 btnCursoSelecionado.addEventListener("click", ()=>{
-    if (document.querySelector("#caixaCursosAdicionados").children.length == 0) {
-        alert("Nenhum curso ainda adicionado!")
-    } else {
-        const cursosAdicionados = [...document.querySelectorAll(".curso")].filter((valores)=>{
-            if (valores.children[1].checked == true) {
-                alert('O curso selecionado é o '+ valores.children[0].innerText)
-            } else {
-                alert("Nenhum curso selecionado ainda!")
-            }
-        })
-    }
+    const cursosAdicionados = [...document.querySelectorAll(".curso")].filter((valores)=>{
+        if (valores.children[1].checked == true) {
+            alert('O curso selecionado é o '+ valores.children[0].innerText)
+        }
+    })
 })
