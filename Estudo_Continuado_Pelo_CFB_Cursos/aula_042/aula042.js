@@ -30,6 +30,19 @@ const criarNovoCurso = (nomeCurso)=>{
     caixaDeCursos.appendChild(divCurso)
 }
 
+const realocamentoDeIDsCursos = ()=>{
+    const todosCursos =  [...document.querySelectorAll(".curso")]
+    todosCursos.map((elemento, indice)=>{
+        elemento.removeAttribute('id')
+        elemento.children[1].removeAttribute('id')
+        elemento.children[0].removeAttribute('for')
+
+        elemento.setAttribute("id", `c${indice+1}`)
+        elemento.children[1].setAttribute('id', `cursoC${indice+1}`)
+        elemento.children[0].setAttribute('for', `cursoC${indice+1}`)
+    })
+}
+
 const encontrarCursoSelecionado = ()=>{
     [...document.querySelectorAll(".curso")].filter((valor)=>{
         if (valor.children[1].checked == true) {
@@ -62,6 +75,7 @@ btnRemoverCurso.addEventListener("click", ()=>{
     encontrarCursoSelecionado()
     try {
         caixaCursosAdicionados.removeChild(cursoSelecionado)
+        realocamentoDeIDsCursos()
     } catch(erro) {
         alert('NENHUM CURSO SELECIONADO!')
     }
