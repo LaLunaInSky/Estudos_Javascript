@@ -4,7 +4,7 @@ const caixaCursosAdicionados = document.querySelector("#caixaCursosAdicionados")
 const btnAddNovoCurso = document.querySelector("#btnAdicionarNovoCurso")
 const btnCursoSelecionado = document.querySelector("#btnCursoSelecionado")
 const inputNomeCurso = document.querySelector("#nomeCurso")
-
+let cursoSelecionado = ''
 const cursosPréCriados = ["HTML", 'CSS', "Javascript", "PHP", "React", "MySQL", "ReactNative"]
 
 const criarNovoCurso = (nomeCurso)=>{
@@ -29,6 +29,14 @@ const criarNovoCurso = (nomeCurso)=>{
     caixaDeCursos.appendChild(divCurso)
 }
 
+const encontrarCursoSelecionado = ()=>{
+    [...document.querySelectorAll(".curso")].filter((valor)=>{
+        if (valor.children[1].checked == true) {
+            cursoSelecionado = valor
+        }   
+    })
+}
+
 cursosPréCriados.map((elemento)=>{
     criarNovoCurso(elemento)
 })
@@ -42,9 +50,6 @@ btnAddNovoCurso.addEventListener('click', ()=>{
 })
 
 btnCursoSelecionado.addEventListener("click", ()=>{
-    const cursosAdicionados = [...document.querySelectorAll(".curso")].filter((valores)=>{
-        if (valores.children[1].checked == true) {
-            alert('O curso selecionado é o '+ valores.children[0].innerText)
-        }
-    })
+    encontrarCursoSelecionado()
+    alert('O curso selecionado é o '+ cursoSelecionado.children[0].innerText)
 })
