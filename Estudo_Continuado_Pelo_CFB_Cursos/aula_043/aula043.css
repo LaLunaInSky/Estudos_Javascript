@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.caixa {
+    width: 300px;
+    padding: 15px;
+    border-radius: 20px;
+    border: 4px solid black;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixaFuncionalidade {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    & label {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+
+    & #nomeCurso {
+        text-align: center;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 1.4em;
+        margin-bottom: 15px;
+    }
+
+    & button {
+        border: 4px solid royalblue;
+        cursor: pointer;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 1.2em;
+        border-radius: 10px;
+        background-color: midnightblue;
+        color: white;
+
+        &:hover {
+            background-color: royalblue;
+            border-color: midnightblue;
+            color: black;
+        }
+    }
+}
+
+.curso {
+    cursor: pointer;
+    width: 200px;
+    border: 4px solid darkgray;
+    background-color: gray;
+    color: white;
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        border-color: gray;
+        background-color: darkgray;
+        color: black;
+    }
+}
+
+.selecionado {
+    background-color: darkred;
+    border-color: brown;
+
+    &:hover {
+        background-color: brown;
+        border-color: darkred;
+        color: white;
+    }
+}
