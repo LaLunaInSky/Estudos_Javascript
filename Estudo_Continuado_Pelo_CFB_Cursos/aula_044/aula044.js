@@ -5,10 +5,10 @@ const caixaDePesquisa = document.querySelector('#pesquisa')
 const btnPesquisar = document.querySelector('button')
 const divResultado = document.querySelector('#caixaResultado>div')
 
-const listaNúmericaParaOArray = [10,5,8,2,9,15,20]
-//const listaTextualParaOArray = []
+const listaParaOArray = ['HTML', 'CSS', 'Javascript']
 
-listaNúmericaParaOArray.map((elemento, indice)=>{
+
+listaParaOArray.map((elemento, indice)=>{
     if (indice != 0) {
         divArray.innerText += ` > ${elemento}`
     } else {
@@ -18,14 +18,22 @@ listaNúmericaParaOArray.map((elemento, indice)=>{
 
 const procurarIndiceInformado = (indice)=>{
     let count = 0
-    listaNúmericaParaOArray.find((elemento, posição)=>{
+    listaParaOArray.find((elemento, posição)=>{
+        if (typeof(elemento) == 'string') {
+            elemento.toLowerCase()
+        }
+
+        if (typeof(indice) == 'string') {
+            indice.toLowerCase()
+        }
+        
         if (elemento == indice){
-            divResultado.innerText = `O ${elemento} foi encontado na posição ${posição+1}`
+            divResultado.innerText = `${elemento} foi encontado na posição ${posição+1}`
         } else {
             count ++
         }
 
-        if (count == listaNúmericaParaOArray.length) {
+        if (count == listaParaOArray.length) {
             divResultado.innerText = `Nenhum ${indice} foi encontrado!`
         }
     })
@@ -37,4 +45,7 @@ btnPesquisar.addEventListener("click", ()=>{
     } else {
         alert("Digite algo para pesquisar!!!")
     }
+
+    caixaDePesquisa.value = ""
+    caixaDePesquisa.focus()
 })
