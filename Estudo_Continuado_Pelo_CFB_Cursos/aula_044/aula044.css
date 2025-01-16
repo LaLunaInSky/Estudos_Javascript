@@ -16,7 +16,6 @@ body {
 main {
     display: flex;
     flex-flow: column;
-    width: 800px;
 
     & > section {
         padding: 15px;
@@ -31,6 +30,8 @@ main {
 .verde {
     background-color: lightgreen;
     border-color: darkgreen;
+    display: flex;
+    justify-content: center;
 
     & > div {
         margin-left: 15px;
@@ -85,6 +86,7 @@ main {
 .vermelho {
     background-color: lightpink;
     border-color: darkred;
+    display: flex;
 
     & > div {
         margin-left: 15px;
